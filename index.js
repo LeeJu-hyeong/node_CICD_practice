@@ -8,7 +8,7 @@ app.get('/', (req, res)=>{
 	});
 });
 
-app.get('api/test/', (req, res)=>{
+app.get('/api/test', (req, res)=>{
 	res.json({
 		apiName: "node.js deploy test",
 		state: "success"
