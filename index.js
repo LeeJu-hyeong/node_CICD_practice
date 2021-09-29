@@ -8,6 +8,13 @@ app.get('/', (req, res)=>{
 	});
 });
 
+app.get('api/test/', (req, res)=>{
+	res.json({
+		apiName: "node.js deploy test",
+		state: "success"
+	});
+});
+
 var server = app.listen('3000', '0.0.0.0', ()=>{
 	var host = server.address().address;
    	var port = server.address().port;
