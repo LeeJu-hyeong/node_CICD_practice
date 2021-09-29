@@ -8,6 +8,17 @@ app.get('/', (req, res)=>{
 	});
 });
 
+app.get('/calculate/:id, (req, res)=>{
+	var n = Number(req.param.id);
+	var sum = n * (n+1) / 2;
+	var power = n * n;
+	res.json({
+		number: n,
+		sigmaFromOneToNumber: sum,
+		power: power
+	});
+});
+
 app.get('/api/test', (req, res)=>{
 	res.json({
 		apiName: "node.js deploy test",
