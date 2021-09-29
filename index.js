@@ -8,7 +8,7 @@ app.get('/', (req, res)=>{
 	});
 });
 
-app.get('/calculate/:id, (req, res)=>{
+app.get('/calculate/:id', (req, res)=>{
 	var n = Number(req.param.id);
 	var sum = n * (n+1) / 2;
 	var power = n * n;
