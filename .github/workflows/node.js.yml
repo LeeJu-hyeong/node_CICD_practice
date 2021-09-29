@@ -27,6 +27,8 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          ls
+          cd node_deploy_practice
+          npm install
+          pm2 start index.js
     
     
