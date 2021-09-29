@@ -29,6 +29,7 @@ jobs:
         script: |
           cd node_deploy_practice
           npm install
+          npm install pm2 -g
           pm2 start index.js
     
     
