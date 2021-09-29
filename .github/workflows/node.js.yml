@@ -19,18 +19,6 @@ jobs:
         node-version: [12.x, 14.x, 16.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/cache@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-        | npm install express
-        | npm install request
-        | npm run build --if-present
-        | npm test
-    
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
