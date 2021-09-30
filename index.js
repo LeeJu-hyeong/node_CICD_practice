@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res)=>{
 	res.json({
-		state: "Success!"
+		state: "오기택 사랑해"
 	});
 });
 
